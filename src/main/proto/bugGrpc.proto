@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.marciofranklin";
+option java_outer_classname = "BugGrpc";
+option objc_class_prefix = "HLW";
+
+package br.com.marciofranklin;
+
+service BugGrpcService {
+  rpc send (BugGrpcRequest) returns (BugGrpcReply) {}
+}
+
+message BugGrpcRequest {
+  string name = 1;
+}
+
+message BugGrpcReply {
+  string message = 1;
+}
